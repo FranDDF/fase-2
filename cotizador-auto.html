@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización para tu auto</title>
+    <link rel="shortcut icon" href="Images/proteger.png" type="image/png">
+    <!--Conexiones con framework Bootstrap y Milligram + CSS propio-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+    <!--div contenedor del formulario para seguro de auto-->
+    <div class="container">
+        <!--Formulario. Sus input tienen validaciones-->
+        <form id="formAuto">
+            <fieldset>
+                <label for="name">Nombre y Apellido</label>
+                <input type="text" id="name" placeholder="José González" required minlength="5" maxlength="50"
+                    pattern="[a-zA-Z\s]{5,50}">
+                <label for="DNI">DNI</label>
+                <input type="text" id="DNI" placeholder="Tu número de documento" required pattern="\d{7,8}">
+                <label for="fechaNac">Fecha de Nacimiento</label>
+                <input type="date" id="fechaNac" placeholder="Día, mes y año de tu nacimiento" required>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="tuemail@email.com" required minlength="11" maxlength="50">
+                <label for="tel">Número de teléfono</label>
+                <input type="text" id="tel" placeholder="Ej. (011)51134857" required pattern="\d{8,13}">
+                <label for="anioA">Año de auto</label>
+                <input type="number" id="anioA" placeholder="Ej. 2014" required min="2000" max="2024">
+
+                <div>
+                    <span id="resultadoCoti">
+
+                    </span>
+                </div>
+
+                <button type="submit" id="cotizarAuto">¡COTIZAR YA!</button>
+                <button type="reset">LIMPIAR</button>
+                <a id="wsp" href="https://web.whatsapp.com/"></a>
+            </fieldset>
+        </form>
+
+
+
+        <!--div para la imagen-->
+        <div class="imgCoti">
+            <img src="Images/11131355.jpg"
+                alt="Dibujo de un hombre y una mujer sentados en un sofá naranja con un gato negro">
+        </div>
+    </div>
+
+    <!--Conexión con JS-->
+    <script src="script-auto.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+/*CSS aplicado a las cards y contenedor*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.card {
+    max-width: 500px;
+    text-align: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin-top: 100px;
+}
+
+.card-img-top {
+    height: 250px;
+}
+
+/*CSS aplicado al form y otros*/
+.form {
+    margin-top: 150px;
+    margin-right: auto;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+.imgCoti {
+    display: flex;
+    background-color: white;
+    width: 50%;
+}
+
+@media (width <=550px) {
+    .imgCoti {
+        width: 300px;
+    }
+}
+
+.estilo {
+    font-weight: bold;
+    color: rgb(116, 125, 248);
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
